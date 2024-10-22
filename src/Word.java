@@ -1,6 +1,6 @@
 public class Word {
-    String value;
-    String translation;
+    private String value;
+    private String translation;
 
     public Word(String value, String translation) {
         this.value = value;
@@ -9,5 +9,13 @@ public class Word {
 
     public  String toString(){
         return String.format("Слово: %-10s Перевод: %-10s",value, translation);
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public String getTranslation() {
+        return translation;
     }
 }

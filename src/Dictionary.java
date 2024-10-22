@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Dictionary {
-    List<Word> words;
+    private List<Word> words;
 
     public Dictionary(List<Word> words) {
         this.words = words;
@@ -9,8 +9,8 @@ public class Dictionary {
 
     public String translation(String value) {
         for (int i = 0; i < words.size(); i++) {
-            if (words.get(i).value.equalsIgnoreCase(value)) {
-                return words.get(i).translation;
+            if (words.get(i).getValue().equalsIgnoreCase(value)) {
+                return words.get(i).getTranslation();
             }
         }
         return "";
@@ -18,8 +18,8 @@ public class Dictionary {
 
     public String getWordByTranslation(String translation) {
         for (int i = 0; i < words.size(); i++) {
-            if (words.get(i).translation.equalsIgnoreCase(translation)) {
-                return words.get(i).value;
+            if (words.get(i).getTranslation().equalsIgnoreCase(translation)) {
+                return words.get(i).getValue();
             }
         }
         return "";
